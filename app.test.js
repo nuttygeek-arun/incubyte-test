@@ -31,4 +31,9 @@ describe('String calculator', () => {
         expect(val).toBe(14);
     })
 
+    it('should saperate values by ,', () => {
+        const val = addFunction('4,8,9,6,7,8,9');
+        expect(val).toBe(51);
+    })
+
 })
