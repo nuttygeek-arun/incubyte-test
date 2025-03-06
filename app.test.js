@@ -5,4 +5,9 @@ describe('String calculator', () => {
         const val = addFunction('7,8');
         expect(val).toBe(15);
     })
+
+    it('should return 0 when empty string is provided', () => {
+        const val = addFunction('');
+        expect(val).toBe(0);
+    })
 })
