@@ -10,4 +10,9 @@ describe('String calculator', () => {
         const val = addFunction('');
         expect(val).toBe(0);
     })
+
+    it('should saperate values by , and \n both', () => {
+        const val = addFunction('8,9\n6');
+        expect(val).toBe(23);
+    })
 })
