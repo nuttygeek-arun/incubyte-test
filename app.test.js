@@ -21,4 +21,9 @@ describe('String calculator', () => {
         expect(val).toBe(27);
     })
 
+    it('should saperate values by custom delimiter &&', () => {
+        const val = addFunction('//&&\n5&&7&&9&&1');
+        expect(val).toBe(22);
+    })
+
 })
