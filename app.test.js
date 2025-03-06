@@ -26,4 +26,9 @@ describe('String calculator', () => {
         expect(val).toBe(22);
     })
 
+    it('should saperate values by custom delimiter ^', () => {
+        const val = addFunction('//^\n1^4^5^4');
+        expect(val).toBe(14);
+    })
+
 })
