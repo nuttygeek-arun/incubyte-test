@@ -15,4 +15,10 @@ describe('String calculator', () => {
         const val = addFunction('8,9\n6');
         expect(val).toBe(23);
     })
+
+    it('should saperate values by custom delimiter', () => {
+        const val = addFunction('//::\n5::7::9::6');
+        expect(val).toBe(27);
+    })
+
 })

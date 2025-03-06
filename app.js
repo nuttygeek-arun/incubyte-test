@@ -1,12 +1,19 @@
 function add(numString) {
     if(numString === '') return 0;
-    const numArray = numString.split(/,|\n/); // saperating vaalues by both , and \n
+    let delimiter = /,|\n/;
+    let numSet = numString;
+    if(numString.includes('//')) { // checking of delimited is there
+        const splitValues = numString.split('//')[1].split('\n') // getting the saperator
+        delimiter = splitValues[0]; // delimiter
+        numSet = splitValues[1]; // value set
+    }
+    const numArray = numSet.split(delimiter); 
     return numArray.map((num) => parseInt(num)).reduce((acc, val) => {
         return acc+val
     }, 0);
 }
 
-const sum = add('5,6\n8');
+const sum = add('//test\n1test2test3');
 console.log(":: sum", sum)
 
 module.exports = add;
